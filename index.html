@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- render all elements normally -->
+    <link rel="stylesheet" href="css/normalized.css" />
+    <!-- main template css file -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <img class="logo" src="images/logo.svg" alt="" />
+        <div class="card">
+          <div class="equations">
+            <div class="bill">
+              <label for="bill">Bill</label>
+              <input type="text" name="bill" id="bill" value="" placeholder="0"/>
+            </div>
+            <div class="percent">
+              <label class="select">Select Tip %</label>
+              <form action="/" method="get">
+                <input type="radio" name="per" value="5%" id="p5" />
+                <label for="p5">5%</label>
+                <input type="radio" name="per" value="10%" id="p10" />
+                <label for="p10">10%</label>
+                <input type="radio" name="per" value="15%" id="p15" />
+                <label for="p15">15%</label>
+                <input type="radio" name="per" value="25%" id="p25" />
+                <label for="p25">25%</label>
+                <input type="radio" name="per" value="50%" id="p50" />
+                <label for="p50">50%</label>
+                <input class="" type="radio" name="per" value="costom" id="pCostom"/>
+                <label id="pCostoml" for="pCostom">Costom</label>
+              </form>
+            </div>
+            <div class="people">
+              <label for="peo">Number of People</label>
+              <input type="text" name="peo" id="peo" value="" placeholder="0" />
+              <p class="error" id="error"></p>
+            </div>
+          </div>
+          <div class="resulting">
+            <div class="tipAmount">
+              <p>Tip Amount<span>/ person</span></p>
+              <p class="num" id="tipNum">$0.00</p>
+            </div>
+            <div class="total">
+              <p>Total<span>/ person</span></p>
+              <p class="num" id="totalNum">$0.00</p>
+            </div>
+            <div class="button">
+              <input class="reset1" type="reset" name="reset" value="RESET" id="reset"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.instagram.com/m1s6b2/">Musab Alahdal</a>.
+      </div>
+    </div>
+    <!-- main template js file -->
+    <script src="main.js"></script>
+  </body>
+</html>
