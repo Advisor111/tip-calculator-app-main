@@ -15,15 +15,15 @@ peo.onkeyup = function() {
       if (pCostom.value == "") {
         pCostom.classList = "";
         pCostoml.style.display = "flex";
-        tipNum.innerHTML = `$${parseFloat((bill.value * pCostom.value / 100 / peo.value).toFixed(2))}`;
-        totalNum.innerHTML = `$${parseFloat((bill.value * pCostom.value / 100 / peo.value).toFixed(2)) + parseFloat((bill.value / peo.value).toFixed(2))}`;
+        tipNum.innerHTML = `$${((bill.value * pCostom.value / 100 / peo.value)).toFixed(2)}`;
+        totalNum.innerHTML = `$${((bill.value * pCostom.value / 100 / peo.value) + (bill.value / peo.value)).toFixed(2)}`;
       } else {
-        tipNum.innerHTML = `$${parseFloat((bill.value * pCostom.value / 100 / peo.value).toFixed(2))}`;
-        totalNum.innerHTML = `$${parseFloat((bill.value * pCostom.value / 100 / peo.value).toFixed(2)) + parseFloat((bill.value / peo.value).toFixed(2))}`;
+        tipNum.innerHTML = `$${((bill.value * pCostom.value / 100 / peo.value)).toFixed(2)}`;
+        totalNum.innerHTML = `$${((bill.value * pCostom.value / 100 / peo.value) + (bill.value / peo.value)).toFixed(2)}`;
       }
     } else {
-      tipNum.innerHTML = `$${parseFloat((bill.value * 0 / 100 / peo.value).toFixed(2))}`;
-      totalNum.innerHTML = `$${parseFloat((bill.value * 0 / 100 / peo.value).toFixed(2)) + parseFloat((bill.value / peo.value).toFixed(2))}`;
+      tipNum.innerHTML = `$${((bill.value * 0 / 100 / peo.value)).toFixed(2)}`;
+      totalNum.innerHTML = `$${((bill.value * 0 / 100 / peo.value) + (bill.value / peo.value)).toFixed(2)}`;
     } 
     //
     if (totalNum.innerHTML == "$NaN") {
@@ -39,8 +39,8 @@ peo.onkeyup = function() {
         break;
       }
     }
-    tipNum.innerHTML = `$${parseFloat((bill.value * parseFloat(selected) / 100 / peo.value).toFixed(2))}`;
-    totalNum.innerHTML = `$${parseFloat((bill.value * parseFloat(selected) / 100 / peo.value).toFixed(2)) + parseFloat((bill.value / peo.value).toFixed(2))}`;
+    tipNum.innerHTML = `$${((bill.value * parseFloat(selected) / 100 / peo.value)).toFixed(2)}`;
+    totalNum.innerHTML = `$${((bill.value * parseFloat(selected) / 100 / peo.value) + (bill.value / peo.value)).toFixed(2)}`;
   }
 };
 //
